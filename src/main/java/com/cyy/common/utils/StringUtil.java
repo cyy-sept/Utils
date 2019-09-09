@@ -48,7 +48,7 @@ public class StringUtil {
 				return false;
 			}
 			
-			String telRegex = "[1][3578]\\\\d{9}";
+			String telRegex = "^[1][3 5 7 8]\\d{9}";
 			return number.matches(telRegex);
 		}
 		

@@ -31,21 +31,21 @@ public class StreamUtilTest {
 		
 	}
 
-	@Test
-	public void testReadTextFileInputStream() throws FileNotFoundException {
-		
-		String string = StreamUtil.readTextFile(new FileInputStream("D:\\git/readme.txt"));
-		
-		System.out.println(string);
-		
-	}
-
-	@Test
-	public void testReadTextFileFile() {
-
-		String string = StreamUtil.readTextFile(new File("D:\\git/readme.txt"));
-		
-		System.out.println(string);
-	}
+//	@Test
+//	public void testReadTextFileInputStream() throws FileNotFoundException {
+//		
+//		String string = StreamUtil.readTextFile(new FileInputStream("D:\\git/readme.txt"));
+//		
+//		System.out.println(string);
+//		
+//	}
+//
+//	@Test
+//	public void testReadTextFileFile() {
+//
+//		String string = StreamUtil.readTextFile(new File("D:\\git/readme.txt"));
+//		
+//		System.out.println(string);
+//	}
 
 }

@@ -38,14 +38,24 @@ public class StringUtilTest {
 	public void testisPhoneNumber() {
 		
 		String number = "13578145687";
-		System.out.println(StringUtil.isPhoneNumber(number));
+		boolean b = StringUtil.isPhoneNumber(number);
+		if(b) {
+			System.out.println("验证通过");
+		}else {
+			System.out.println("验证失败");
+		}
 	}
 	
 	@Test
 	public void testisEmail() {
 		
-		String email = "123ss@qq.com";
-		System.out.println(StringUtil.isEmail(email));
+		String email = "a123a545@qq.com";
+		boolean b = StringUtil.isEmail(email);
+		if(b) {
+			System.out.println("验证通过");
+		}else {
+			System.out.println("验证失败");
+		}
 	}
 	
 	@Test
