@@ -24,7 +24,30 @@ import org.junit.Test;
  * @date: 2019年9月6日 下午4:50:57  
  */
 public class StringUtilTest {
+	
+	@Test
+	public void testtoHtml() {
+		
+		String  str = "是减肥减肥是京东方的水电费的\n发动机号上课圣诞节\n凤凰的金凤凰是所讲的话费";
+		
+		String html = StringUtil.toHtml(str);
+		System.out.println(html);
+	}
 
+	@Test
+	public void testisPhoneNumber() {
+		
+		String number = "13578145687";
+		System.out.println(StringUtil.isPhoneNumber(number));
+	}
+	
+	@Test
+	public void testisEmail() {
+		
+		String email = "123ss@qq.com";
+		System.out.println(StringUtil.isEmail(email));
+	}
+	
 	@Test
 	public void testHasLength() {
 		
