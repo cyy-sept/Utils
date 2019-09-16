@@ -28,7 +28,7 @@ public class StringUtilTest {
 	@Test
 	public void testtoHtml() {
 		
-		String  str = "是减肥减肥是京东方的水电费的\n发动机号上课圣诞节\n凤凰的金凤凰是所讲的话费";
+		String  str = "是减肥减肥是京东方的水电费的\r\n发动机号上课圣诞节\r\n凤凰的金凤凰是所讲的话费";
 		
 		String html = StringUtil.toHtml(str);
 		System.out.println(html);

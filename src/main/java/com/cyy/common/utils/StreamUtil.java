@@ -11,11 +11,15 @@
  */
 package com.cyy.common.utils;
 
+import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.omg.CORBA.portable.InputStream;
 
@@ -85,5 +89,31 @@ public class StreamUtil {
 			e.printStackTrace();
 		}
 		return null;
+	}
+	
+	/**
+	 * 一行行读取数据返回的结果集
+	 * @Title: readFile 
+	 * @Description: TODO
+	 * @param in
+	 * @return
+	 * @return: List<String>
+	 */
+	public static List<String> readFile(InputStream in) {
+
+		BufferedReader reader = new BufferedReader(new InputStreamReader(in));
+
+		List<String> list = new ArrayList<>();
+		String lineText = null;
+		try {
+			while ((lineText = reader.readLine()) != null) {
+
+				list.add(lineText);
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return list;
+
 	}
 }

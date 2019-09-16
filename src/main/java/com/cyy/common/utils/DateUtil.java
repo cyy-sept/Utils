@@ -21,6 +21,17 @@ import java.util.Date;
  * @date: 2019年9月5日 上午10:24:43  
  */
 public class DateUtil {
+	
+	public static Date getDateByMonthSub(Date date,Integer month) {
+		
+		Calendar c = Calendar.getInstance();
+		
+		c.setTime(date);
+		
+		c.add(Calendar.MONTH, -month);
+		
+		return c.getTime();
+	}
 
 	/*
 	 * 方法1：(5分) 返回给定日期的月初 给一个时间对象，返回该时间所在月的1日0时0分0秒。例如一个Date对象的值是2019-05-18 11:37:22
