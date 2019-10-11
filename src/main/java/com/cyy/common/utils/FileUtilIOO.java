@@ -2,11 +2,11 @@
  * Copyright © 2019 公司名. All rights reserved.
  * 
  * @Title: FileUtilIO.java 
- * @Prject: cyy-common
- * @Package: com.cyy.common.utils 
+ * @Prject: chj_commons
+ * @Package: com.chj.common.utils.file 
  * @Description: TODO
- * @author: 露露先生   
- * @date: 2019年10月11日 下午1:42:00 
+ * @author: chj   
+ * @date: 2019年8月30日 上午11:18:30 
  * @version: V1.0   
  */
 package com.cyy.common.utils;
@@ -20,14 +20,23 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
-/** 
- * @ClassName: FileUtilIO 
+/**
+ * @ClassName: FileUtilIO
  * @Description: TODO
  * @author: 程远扬
- * @date: 2019年10月11日 下午1:42:00  
+ * @date: 2019年8月30日 上午11:18:30
  */
 public class FileUtilIO {
 
+	/**
+	 * @Title: writeFile
+	 * @Description: 按照指定的编码把内容写入指定的文件中
+	 * @param path
+	 * @param content
+	 * @param charset
+	 * @throws IOException
+	 * @return: void
+	 */
 	public static void writeFile(String path, String content, String charset) throws IOException {
 		// 创建写入的文件
 		File file = new File(path);
@@ -43,6 +52,15 @@ public class FileUtilIO {
 		bw.close();
 	}
 
+	/**
+	 * @Title: readFile
+	 * @Description: 读取文件内容
+	 * @param file
+	 * @param charset
+	 * @return
+	 * @throws IOException
+	 * @return: String
+	 */
 	public static String readFile(File file, String charset) throws IOException {
 		// 创建输出流对象
 		BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(file), charset));
