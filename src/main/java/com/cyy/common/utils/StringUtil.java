@@ -39,6 +39,17 @@ public class StringUtil {
 			return newStr;
 			
 		}
+	
+	//判断是否是数字 
+	public static boolean isNumber(String src) {
+		String regex ="^[0-9]+$";
+		Pattern p = Pattern.compile(regex);
+		Matcher m = p.matcher(src);
+		if(m.find())
+			return true;
+		return false;
+		
+	}
 		
 	//验证手机号
 		public static boolean isPhoneNumber(String number) {
